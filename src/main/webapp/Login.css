@@ -32,3 +32,6 @@ h1 {
 #closeButton {
   margin: 15px 6px 6px;
 }
+
+.pruebaDiv
+ { position:absolute; top:270px; left:20px; }
