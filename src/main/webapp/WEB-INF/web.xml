@@ -13,12 +13,12 @@
 
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/Login/greet</url-pattern>
+    <url-pattern>/WebChat/greet</url-pattern>
   </servlet-mapping>
 
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>Login.html</welcome-file>
+    <welcome-file>WebChat.html</welcome-file>
   </welcome-file-list>
 
 </web-app>

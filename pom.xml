@@ -78,7 +78,7 @@
         <!-- Plugin configuration. There are many available options, see 
           gwt-maven-plugin documentation at codehaus.org -->
         <configuration>
-          <runTarget>Login.html</runTarget>
+          <runTarget>WebChat.html</runTarget>
           <hostedWebapp>${webappDirectory}</hostedWebapp>
           <i18nMessagesBundle>org.webchat.client.Messages</i18nMessagesBundle>
         </configuration>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
   <!-- Inherit our applications main module.                      -->
-  <inherits name='org.webchat.Login' />
+  <inherits name='org.webchat.WebChat' />
 
   <!-- Specify the path to any remote services.                   -->
-  <servlet path="/Login/greet" class="org.webchat.server.GreetingServiceImpl" />
+  <servlet path="/WebChat/greet" class="org.webchat.server.GreetingServiceImpl" />
 
 </module>

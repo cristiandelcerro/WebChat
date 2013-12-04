@@ -12,7 +12,7 @@
     <!--                                                               -->
     <!-- Consider inlining CSS to reduce the number of requested files -->
     <!--                                                               -->
-    <link type="text/css" rel="stylesheet" href="Login.css">
+    <link type="text/css" rel="stylesheet" href="WebChat.css">
 
     <!--                                           -->
     <!-- Any title is fine                         -->
@@ -24,7 +24,7 @@
     <!-- If you add any GWT meta tags, they must   -->
     <!-- be added before this line.                -->
     <!--                                           -->
-    <script type="text/javascript" language="javascript" src="Login/Login.nocache.js"></script>
+    <script type="text/javascript" language="javascript" src="WebChat/WebChat.nocache.js"></script>
   </head>
 
   <!--                                           -->
@@ -47,22 +47,6 @@
 
     <h1>WebChat Kata</h1>
 
-    <div class="pruebaDiv">
-      <div>
-        <p colspan="2" style="font-weight:bold;">Pon tu usuario y contraseña:</p>
-      </div>
-      <div>
-        <p id="nameFieldContainer"></p>
-      </div>
-      <div>
-        <p id="passwordFieldContainer"></p>
-      </div>
-      <div>
-          <p id="loginButtonContainer"></p>
-      </div>
-      <div>
-        <p colspan="2" style="color:red;" id="errorLabelContainer"></p>
-      </div>
-    </div>
+    <div class="chat" id="chatContainer"></div>
   </body>
 </html>

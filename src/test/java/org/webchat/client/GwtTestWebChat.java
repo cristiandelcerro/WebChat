@@ -16,13 +16,13 @@ import com.google.gwt.user.client.rpc.ServiceDefTarget;
  * See http://mojo.codehaus.org/gwt-maven-plugin/user-guide/testing.html 
  * for details.
  */
-public class GwtTestLogin extends GWTTestCase {
+public class GwtTestWebChat extends GWTTestCase {
 
   /**
    * Must refer to a valid module that sources this class.
    */
   public String getModuleName() {
-    return "org.webchat.LoginJUnit";
+    return "org.webchat.WebChatJUnit";
   }
 
   /**
@@ -45,7 +45,7 @@ public class GwtTestLogin extends GWTTestCase {
     // Create the service that we will test.
     GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
     ServiceDefTarget target = (ServiceDefTarget) greetingService;
-    target.setServiceEntryPoint(GWT.getModuleBaseURL() + "Login/greet");
+    target.setServiceEntryPoint(GWT.getModuleBaseURL() + "WebChat/greet");
 
     // Since RPC calls are asynchronous, we will need to wait for a response
     // after this test method returns. This line tells the test runner to wait
