@@ -15,7 +15,6 @@ public class GetRequestCallback implements RequestCallback {
     public void onResponseReceived(Request request, Response response) {
         if (response.getStatusCode() == 200)
             chatPresenter.processGetResponse(response.getText());
-
         else
             chatPresenter.failedReception();
     }

@@ -9,4 +9,5 @@ package org.webchat.client.util;
  */
 public class Constants {
     final public static String URL = "http://127.0.0.1:8080/chat-kata/api/chat";
+    final public static int timeToRepeatReceiver = 1500;
 }

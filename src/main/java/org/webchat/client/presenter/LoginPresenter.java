@@ -1,6 +1,6 @@
 package org.webchat.client.presenter;
 
-public class LoginPresenter {
+public class LoginPresenter implements ILoginPresenter {
     public boolean login(String userName, String userPassword) {
         boolean r = true;
 

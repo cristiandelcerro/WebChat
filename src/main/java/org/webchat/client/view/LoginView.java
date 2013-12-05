@@ -3,11 +3,12 @@ package org.webchat.client.view;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.*;
-import org.webchat.client.presenter.LoginPresenter;
+import org.webchat.client.presenter.ILoginPresenter;
 import org.webchat.client.Messages;
+import org.webchat.client.presenter.LoginPresenter;
 
 public class LoginView {
-    private LoginPresenter loginPresenter;
+    private ILoginPresenter loginPresenter;
 
     private RootPanel chatContainer;
     private Messages messages;

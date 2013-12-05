@@ -1,15 +1,23 @@
 package org.webchat.client.presenter;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.http.client.*;
-import org.webchat.client.model.ChatMessage;
+import com.google.gwt.user.client.Timer;
+import com.google.web.bindery.autobean.shared.AutoBean;
+import com.google.web.bindery.autobean.shared.AutoBeanCodex;
+import org.webchat.client.model.*;
 import org.webchat.client.util.Constants;
 import org.webchat.client.util.GetRequestCallback;
 import org.webchat.client.util.PostRequestCallback;
+import org.webchat.client.util.ReceiverTimer;
 import org.webchat.client.view.IChatView;
 
 import java.util.LinkedList;
+import java.util.List;
 
-public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallback, IChatPresenterForGetCallback {
+public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallback, IChatPresenterForGetCallback,
+    IChatPresenterForReceiver {
+
     private String userName;
     private IChatView chatView;
 //    private ReceiverTimer receiverTimer;
@@ -18,6 +26,7 @@ public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallb
     private int lastSeq;
 
     public ChatPresenter(String userName, IChatView chatView) {
+        this.lastSeq = 0;
         this.userName = userName;
         this.chatView = chatView;
         stopped = true;
@@ -28,15 +37,18 @@ public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallb
 //        senderThread.start();
 //        receiverTimer = new ReceiverTimer(this);
 //    }
-//
-//    synchronized void start() {
+
+    public void start() {
+        ReceiverTimer receiverTimer = new ReceiverTimer(this);
+        receiverTimer.scheduleRepeating(Constants.timeToRepeatReceiver);
+
 //        if (!stopped) return;
 //        stopped = false;
 //
 //        restoreLastSeq();
 //        createTimers();
-//    }
-//
+    }
+
 //    synchronized void stop() {
 //        if (stopped) return;
 //        stopped = true;
@@ -50,9 +62,7 @@ public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallb
 //            senderThread.prepareMessageToSend(message);
             String messageToSend = message.toJSON();
             post(messageToSend);
-            get();
         }
-
     }
 
     private void post(String messageToSend) {
@@ -69,8 +79,8 @@ public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallb
         }
     }
 
-    private void get() {
-        RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, Constants.URL + "?next_seq=0");
+    public void get() {
+        RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, Constants.URL + "?next_seq=" + lastSeq);
         builder.setHeader("content-type", "application/json");
         GetRequestCallback getRequestCallback = new GetRequestCallback(this);
 
@@ -92,20 +102,15 @@ public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallb
     }
 
     public void processGetResponse(String getResponse) {
-        LinkedList<String> newList = new LinkedList<String>();
-        newList.add(getResponse);
-        chatView.addToMessageList(newList);
+        ServerResponseAutoBeanFactory serverResponseAutoBeanFactory = GWT.create(ServerResponseAutoBeanFactory.class);
+        AutoBean<IServerResponse> autoBean = AutoBeanCodex.decode(serverResponseAutoBeanFactory, IServerResponse.class,
+                getResponse);
+        IServerResponse serverResponse = autoBean.as();
+        lastSeq = serverResponse.getNextSeq();
+        List<IChatMessage> messages = serverResponse.getMessages();
+        chatView.addToMessageList(serverResponse.getMessages());
     }
 
-//    void receiveMessages(ServerResponse serverResponse) {
-//        synchronized (this) {
-//            if (stopped) return;
-//            lastSeq = serverResponse.getNextSeq();
-//        }
-//
-//        messageList.addAll(serverResponse.getMessages());
-//        chatActivityHandler.sendEmptyMessage(0);
-//    }
 //
 //    private void destroyTimers() {
 //        senderThread.finish();
