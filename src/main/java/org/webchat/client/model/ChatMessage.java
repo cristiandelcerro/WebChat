@@ -1,8 +1,8 @@
-package org.webchat.client.util;
+package org.webchat.client.model;
 
-import com.google.web.bindery.autobean.shared.AutoBean;
-import com.google.web.bindery.autobean.shared.AutoBeanCodex;
-import com.google.web.bindery.autobean.shared.AutoBeanUtils;
+//import com.google.web.bindery.autobean.shared.AutoBean;
+//import com.google.web.bindery.autobean.shared.AutoBeanCodex;
+//import com.google.web.bindery.autobean.shared.AutoBeanUtils;
 
 public class ChatMessage {
     private String nick;
@@ -26,10 +26,11 @@ public class ChatMessage {
     }
 
     public String toJSON() {
-//        return "{nick: \"" + nick + "\", message: \"" + message + "\"}";
-        AutoBean<ChatMessage> bean = AutoBeanUtils.getAutoBean(this);
-        return AutoBeanCodex.encode(bean).getPayload();
 
+        return "{\"nick\": \"" + nick + "\", \"message\": \"" + message + "\"}";
+        // TODO: hacer lo del autobean.
+//        AutoBean<ChatMessage> bean = AutoBeanUtils.getAutoBean(this);
+//        return AutoBeanCodex.encode(bean).getPayload();
     }
 
     public void setNick(String nick) {

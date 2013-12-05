@@ -5,50 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3005659-84fc-445f-ac45-e321e9dfd5d2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/util/ChatMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/ChatPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/view/ChatView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/LoginPresenter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/view/LoginView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/WebChat.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/webchat/client/Login.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/org/webchat/Login.gwt.xml" afterPath="$PROJECT_DIR$/src/main/resources/org/webchat/WebChat.gwt.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Login.css" afterPath="$PROJECT_DIR$/src/main/webapp/WebChat.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Login.html" afterPath="$PROJECT_DIR$/src/main/webapp/WebChat.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/org/webchat/client/GwtTestLogin.java" afterPath="$PROJECT_DIR$/src/test/java/org/webchat/client/GwtTestWebChat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/org/webchat/LoginJUnit.gwt.xml" afterPath="$PROJECT_DIR$/src/test/resources/org/webchat/WebChatJUnit.gwt.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginTest-dev.launch" afterPath="$PROJECT_DIR$/LoginTest-dev.launch" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginTest-prod.launch" afterPath="$PROJECT_DIR$/LoginTest-prod.launch" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/org/webchat/client/Messages.properties" afterPath="$PROJECT_DIR$/src/main/resources/org/webchat/client/Messages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessageAutoBeanFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/util/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/util/GetRequestCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenterForGetCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenterForPostCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/view/IChatView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/util/PostRequestCallback.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/webchat/client/util/ChatMessage.java" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/ChatPresenter.java" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/ChatPresenter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/webchat/client/view/ChatView.java" afterPath="$PROJECT_DIR$/src/main/java/org/webchat/client/view/ChatView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/org/webchat/WebChat.gwt.xml" afterPath="$PROJECT_DIR$/src/main/resources/org/webchat/WebChat.gwt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebChat.iml" afterPath="$PROJECT_DIR$/WebChat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebChat.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386168615749" ignored="false" />
+    <file path="/Dummy.txt" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386243285878" ignored="false" />
     <file path="/Login.html" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386151066958" ignored="false" />
     <file path="/Login.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167356730" ignored="false" />
     <file path="/Messages.properties" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386170168462" ignored="false" />
     <file path="/Messages_es.properties" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386085010956" ignored="false" />
     <file path="/Login.css" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386151522483" ignored="false" />
     <file path="/Login.gwt.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386148228829" ignored="false" />
-    <file path="/fragment.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386172662905" ignored="false" />
+    <file path="/fragment.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386241243413" ignored="false" />
     <file path="/LoginView.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386175710520" ignored="false" />
-    <file path="/ChatView.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386176862142" ignored="false" />
-    <file path="/WebChat.gwt.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167450872" ignored="false" />
+    <file path="/ChatView.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386248533506" ignored="false" />
+    <file path="/WebChat.gwt.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386239665609" ignored="false" />
     <file path="/a.dummy" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386168040221" ignored="false" />
     <file path="/LoginTest-dev.launch" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167602759" ignored="false" />
     <file path="/LoginTest-prod.launch" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167610031" ignored="false" />
     <file path="/WebChat.html" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167672906" ignored="false" />
     <file path="/web.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167775578" ignored="false" />
     <file path="/WebChatJUnit.gwt.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386167801285" ignored="false" />
-    <file path="/pom.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386168308746" ignored="false" />
-    <file path="/ChatPresenter.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386176757853" ignored="false" />
-    <file path="/ChatMessage.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386175845131" ignored="false" />
+    <file path="/pom.xml" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386236698334" ignored="false" />
+    <file path="/ChatPresenter.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386248380436" ignored="false" />
+    <file path="/ChatMessage.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386248618696" ignored="false" />
     <file path="/WebChat.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386176193301" ignored="false" />
+    <file path="/IChatMessage.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386238783122" ignored="false" />
+    <file path="/Constants.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386241426389" ignored="false" />
+    <file path="$USER_HOME$/repositorioGit/chat-kata/client/SimpleChat/src/main/java/org/ejmc/android/simplechat/ChatPresenter.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386242509530" ignored="false" />
+    <file path="/PostRequestCallback.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386244587980" ignored="false" />
+    <file path="/IChatPresenterForPostCallback.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386244289040" ignored="false" />
+    <file path="/IChatView.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386244431777" ignored="false" />
+    <file path="/GetRequestCallback.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386245960564" ignored="false" />
+    <file path="/IChatPresenterForGetCallback.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386245907921" ignored="false" />
+    <file path="/MyAutoBeanFactory.java" changelist="a3005659-84fc-445f-ac45-e321e9dfd5d2" time="1386247500475" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,13 +112,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WebChat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/WebChat.java">
+      <file leaf-file-name="ChatMessage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="8" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="30" column="39" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.53754264">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatMessageAutoBeanFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessageAutoBeanFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="16" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,42 +133,31 @@
       <file leaf-file-name="ChatPresenter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/ChatPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="26" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
+            <state line="47" column="23" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1483#1491#0" expanded="true" />
+                <element signature="e#3029#3037#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IChatPresenter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/view/ChatView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="53" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.6818182">
+            <state line="27" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatMessage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/util/ChatMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="11" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/view/LoginView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="51" selection-start="1506" selection-end="1526" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -174,6 +173,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -181,22 +181,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/LoginView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/IChatPresenterForPostCallback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenterForPostCallback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/PostRequestCallback.java" />
         <option value="$PROJECT_DIR$/src/main/resources/org/webchat/WebChat.gwt.xml" />
-        <option value="$PROJECT_DIR$/LoginTest-dev.launch" />
-        <option value="$PROJECT_DIR$/LoginTest-prod.launch" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WebChat.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/org/webchat/WebChatJUnit.gwt.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/org/webchat/client/GwtTestWebChat.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/webchat/client/Messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenterForGetCallback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/GetRequestCallback.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/view/IChatView.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/ChatMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/view/LoginView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/WebChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/MyAutoBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/util/ChatMessageAutoBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessageAutoBeanFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/ChatPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/view/ChatView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessage.java" />
       </list>
     </option>
   </component>
@@ -300,6 +300,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -542,22 +543,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebChat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebChat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webchat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -574,7 +612,7 @@
       <recent name="org.webchat.client.view" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Remote.gwt-run">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -601,6 +639,24 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -685,7 +741,40 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="gwt-run" type="Remote" factoryName="Remote">
+      <module name="WebChat" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8000" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8000" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Remote.gwt-run" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -723,31 +812,55 @@
       <created>1386089984173</created>
       <updated>1386089984173</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Añadiendo la pantalla de chat y resolviendo bugs diversos.">
+      <created>1386176901506</created>
+      <updated>1386176901506</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40021345" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33720288" sideWeight="0.66168624" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34494194" sideWeight="0.65314835" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498618" sideWeight="0.66168624" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33831376" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16583748" sideWeight="0.65314835" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34685165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -794,7 +907,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminado login y empezando con CSS3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadiendo la pantalla de chat y resolviendo bugs diversos." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -810,6 +923,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Empezando el WebChat." />
     <MESSAGE value="Terminado login y empezando con CSS3." />
+    <MESSAGE value="Añadiendo la pantalla de chat y resolviendo bugs diversos." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -819,127 +933,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LoginTest-prod.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="74" selection-start="740" selection-end="740" vertical-scroll-proportion="0.22881356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WebChat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="77" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.68904597">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="557" selection-end="557" vertical-scroll-proportion="0.49751243">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/org/webchat/WebChatJUnit.gwt.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="249" selection-end="249" vertical-scroll-proportion="0.14925373">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.settings/com.google.appengine.eclipse.core.prefs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.settings/com.google.gdt.eclipse.core.prefs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginTest-dev.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="74" selection-start="741" selection-end="741" vertical-scroll-proportion="0.22881356">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/webchat/client/GwtTestWebChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="870" selection-end="870" vertical-scroll-proportion="0.46969697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="66" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.0">
+        <state line="74" column="12" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/webchat/client/Messages.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/GreetingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/LoginPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+        <state line="9" column="17" selection-start="254" selection-end="254" vertical-scroll-proportion="0.2238806">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/view/LoginView.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/web/bindery/event/shared/SimpleEventBus.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="51" selection-start="1506" selection-end="1526" vertical-scroll-proportion="0.0">
+        <state line="58" column="22" selection-start="2622" selection-end="2622" vertical-scroll-proportion="-6.96" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/gwt/gwt-servlet/2.6.0-rc1/gwt-servlet-2.6.0-rc1.jar!/com/google/gwt/event/shared/HandlerManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="16" selection-start="764" selection-end="764" vertical-scroll-proportion="-6.96" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="59" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/WebChat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenterForPostCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
+        <state line="10" column="31" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/util/PostRequestCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/util/ChatMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/webchat/WebChat.gwt.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+        <state line="14" column="4" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenterForGetCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="55" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/util/GetRequestCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="65" selection-start="667" selection-end="667" vertical-scroll-proportion="0.4095563">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/view/IChatView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="192" selection-end="192" vertical-scroll-proportion="0.15358362">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessageAutoBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/ChatPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="26" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
+        <state line="47" column="23" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1483#1491#0" expanded="true" />
+            <element signature="e#3029#3037#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/presenter/IChatPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/view/ChatView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="53" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.6818182">
+        <state line="27" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/webchat/client/model/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="39" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.53754264">
+          <folding />
         </state>
       </provider>
     </entry>

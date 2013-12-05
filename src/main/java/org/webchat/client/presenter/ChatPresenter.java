@@ -1,22 +1,23 @@
 package org.webchat.client.presenter;
 
-import org.webchat.client.util.ChatMessage;
-import org.webchat.client.view.ChatView;
+import com.google.gwt.http.client.*;
+import org.webchat.client.model.ChatMessage;
+import org.webchat.client.util.Constants;
+import org.webchat.client.util.GetRequestCallback;
+import org.webchat.client.util.PostRequestCallback;
+import org.webchat.client.view.IChatView;
 
 import java.util.LinkedList;
 
-public class ChatPresenter {
-    public static final String server = "http://172.16.100.50:8080/chat-kata/api/chat";
-    public static final String savedProperties = "savedProperties";
-
+public class ChatPresenter implements IChatPresenter, IChatPresenterForPostCallback, IChatPresenterForGetCallback {
     private String userName;
-    private ChatView chatView;
+    private IChatView chatView;
 //    private ReceiverTimer receiverTimer;
 //    private SenderThread senderThread;
     private boolean stopped;
     private int lastSeq;
 
-    public ChatPresenter(String userName, ChatView chatView) {
+    public ChatPresenter(String userName, IChatView chatView) {
         this.userName = userName;
         this.chatView = chatView;
         stopped = true;
@@ -48,13 +49,52 @@ public class ChatPresenter {
         if(!message.getMessage().equals("") && !message.getNick().equals("")) {
 //            senderThread.prepareMessageToSend(message);
             String messageToSend = message.toJSON();
-            LinkedList<String> l = new LinkedList<String>();
-            l.add("hola");
-            l.add(message.toString());
-            l.add(messageToSend);
-            chatView.addToMessageList(l);
+            post(messageToSend);
+            get();
         }
 
+    }
+
+    private void post(String messageToSend) {
+        RequestBuilder builder = new RequestBuilder(RequestBuilder.POST, Constants.URL);
+        builder.setHeader("content-type", "application/json");
+        PostRequestCallback postRequestCallback = new PostRequestCallback(this);
+
+        try {
+            builder.sendRequest(messageToSend, postRequestCallback);
+        }
+
+        catch (RequestException e) {
+            chatView.setNotificationsLabelText("No se ha podido enviar el mensaje correctamente.");
+        }
+    }
+
+    private void get() {
+        RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, Constants.URL + "?next_seq=0");
+        builder.setHeader("content-type", "application/json");
+        GetRequestCallback getRequestCallback = new GetRequestCallback(this);
+
+        try {
+            builder.sendRequest(null, getRequestCallback);
+        }
+
+        catch (RequestException e) {
+            chatView.setNotificationsLabelText("No se ha podido enviar el mensaje correctamente.");
+        }
+    }
+
+    public void failedSending() {
+        chatView.setNotificationsLabelText("No se ha podido enviar el mensaje correctamente.");
+    }
+
+    public void failedReception() {
+        chatView.setNotificationsLabelText("Ha fallado la recepción de mensajes.");
+    }
+
+    public void processGetResponse(String getResponse) {
+        LinkedList<String> newList = new LinkedList<String>();
+        newList.add(getResponse);
+        chatView.addToMessageList(newList);
     }
 
 //    void receiveMessages(ServerResponse serverResponse) {
