@@ -10,7 +10,6 @@ import org.webchat.client.presenter.LoginPresenter;
 public class LoginView {
     private ILoginPresenter loginPresenter;
 
-    private RootPanel chatContainer;
     private Messages messages;
     private VerticalPanel loginPanel;
     private TextBox nameField;
@@ -19,10 +18,14 @@ public class LoginView {
     private Label passwordLabel;
     private Label errorLabel;
     private Button loginButton;
+    private boolean alreadyStarted;
+    private ChatView chatView;
 
     public LoginView(Messages messages) {
         this.loginPresenter = new LoginPresenter();
         this.messages = messages;
+        this.alreadyStarted = false;
+        chatView = new ChatView(messages, this);
     }
 
     private void createWidgets() {
@@ -32,18 +35,11 @@ public class LoginView {
         passwordLabel = new Label(messages.passwordField());
         errorLabel = new Label();
 
-        nameField.setText(messages.nameField());
-        passwordField.setText(messages.passwordField());
-
         createLoginButton();
     }
 
     private void createLoginButton() {
         loginButton = new Button(messages.loginButton());
-
-        // We can add style names to widgets
-//        loginButton.addStyleName("sendButton");
-
         loginButton.addClickHandler(new LoginButtonHandler(this));
     }
 
@@ -53,18 +49,16 @@ public class LoginView {
         boolean loginSuccessful = loginPresenter.login(userName, passwordField.getText());
 
         if (loginSuccessful) {
-            errorLabel.setText("Bienvenido, " + userName);
             stop();
             startChatView(userName);
         }
 
         else
-            errorLabel.setText("Usuario y/o contraseña incorrectos.");
+            errorLabel.setText(messages.incorrectUser());
     }
 
     private void startChatView(String userName) {
-        ChatView chatView = new ChatView(userName, messages);
-        chatView.start();
+        chatView.start(userName);
     }
 
     private void addWidgetsToChatPanel() {
@@ -72,22 +66,39 @@ public class LoginView {
         loginPanel.add(nameField);
         loginPanel.add(passwordLabel);
         loginPanel.add(passwordField);
+
+        loginPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         loginPanel.add(loginButton);
+
+        loginPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
         loginPanel.add(errorLabel);
+
+        loginLabel.setHeight("100%");
+        passwordLabel.setHeight("100%");
     }
 
     public void start() {
-        chatContainer = RootPanel.get("chatContainer");
-        loginPanel = new VerticalPanel();
+        if (alreadyStarted)
+            loginPanel.setVisible(true);
 
-        createWidgets();
-        addWidgetsToChatPanel();
+        else {
+            alreadyStarted = true;
+            RootPanel chatContainer = RootPanel.get("chatContainer");
+            chatContainer.setStyleName("loginView");
+            loginPanel = new VerticalPanel();
 
-        chatContainer.add(loginPanel);
+            createWidgets();
+            addWidgetsToChatPanel();
+
+            chatContainer.add(loginPanel);
+        }
+
+
     }
 
     private void stop() {
-        chatContainer.remove(loginPanel);
+//        chatContainer.remove(loginPanel);
+        loginPanel.setVisible(false);
     }
 
     class LoginButtonHandler implements ClickHandler {

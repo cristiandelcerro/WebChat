@@ -10,11 +10,6 @@ h1 {
   text-align: center;
 }
 
-.sendButton {
-  display: block;
-  font-size: 16pt;
-}
-
 /** Most GWT widgets already have a style name defined */
 .gwt-DialogBox {
   width: 400px;
@@ -33,8 +28,36 @@ h1 {
   margin: 15px 6px 6px;
 }
 
+.loginView{
+     width: 400px;
+     height: 400px;
+     display: -webkit-box; display: -moz-box; display: box;
+        -webkit-box-orient: vertical;-moz-box-orient: vertical;box-orient: vertical;
+        -webkit-box-align: center;-moz-box-align: center;flex-align: center;
+        -webkit-box-pack: center;-moz-box-pack: center;flex-pack: center;
+     margin: auto;
+
+}
+.scrollPanel{
+       width: 400px;
+       height: 320px;
+}
+
+.textBoxChat {
+    padding: 2px;
+    width: 338px;
+}
+
 .chat {
     position: absolute;
     top: center;
     left: center;
+}
+
+.exitButtonStyle {
+    align-content: center;
+}
+
+.tableVerticalPanel{
+    text-align: center;
 }

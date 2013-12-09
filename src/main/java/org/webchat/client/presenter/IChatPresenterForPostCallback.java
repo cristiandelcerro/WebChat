@@ -8,5 +8,5 @@ package org.webchat.client.presenter;
  * To change this template use File | Settings | File Templates.
  */
 public interface IChatPresenterForPostCallback {
-    public void failedSending();
+    public void failedSending(String messageToSend);
 }

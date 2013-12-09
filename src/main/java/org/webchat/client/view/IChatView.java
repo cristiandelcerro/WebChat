@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface IChatView {
     public void addToMessageList(List<IChatMessage> newMessages);
-    public void setNotificationsLabelText(String text);
+    public void notifyFailedReception();
+    public void notifyFailedSending();
 }
